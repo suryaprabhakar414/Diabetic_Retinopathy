@@ -43,13 +43,19 @@ input_tensor=Input(shape=(299,299,3))
 
 ## MODEL DEFINITION
 
-base_model = InceptionResNetV2(input_shape =input_tensor,weights = 'imagenet',include_top = False)
-x = base_model.output
-x = GlobalAveragePooling2D()(x)
-x = Dense(1024, activation='relu')(x)
-predictions = Dense(5, activation='softmax')(x)
-model = Model(inputs=base_model.input, outputs=predictions)
-model.compile(optimizer='rmsprop', loss='categorical_crossentropy',metrics = ['categorical_accuracy'])
+def Model_def(pretrained_weights = None):
+  base_model = InceptionResNetV2(input_shape =input_tensor,weights = 'imagenet',include_top = False)
+  x = base_model.output
+  x = GlobalAveragePooling2D()(x)
+  x = Dense(1024, activation='relu')(x)
+  predictions = Dense(5, activation='softmax')(x)
+  model = Model(inputs=base_model.input, outputs=predictions)
+  model.compile(optimizer='rmsprop', loss='categorical_crossentropy',metrics = ['categorical_accuracy'])
+  if(pretrained_weights):
+     model.load_weights(pretrained_weights)
+  return model
+  
+model = Model_def(pretrained_weights = 'DR/Data/Weights_InceptionResNetV2/InceptionResNetV2.01-1.253-0.1903.hdf5')
 
 ## TRAINING 
 checkpoint = ModelCheckpoint('DR/Data/Weights_InceptionResNetV2/InceptionResNetV2.{epoch:02d}-{val_loss:.4f}-{val_acc:.4f}.hdf5', monitor='val_loss', verbose=1, 
@@ -57,5 +63,5 @@ checkpoint = ModelCheckpoint('DR/Data/Weights_InceptionResNetV2/InceptionResNetV
 
 reduceLROnPlat = ReduceLROnPlateau(monitor='val_loss', factor=0.8, patience=3, verbose=1, mode='auto', epsilon=0.0001, cooldown=5, min_lr=0.0001)
 callbacks_list = [checkpoint,  reduceLROnPlat]
-history=model.fit_generator(generator = train_set,steps_per_epoch=1424,epochs=1,callbacks=callbacks_list,
+history=model.fit_generator(generator = train_set,steps_per_epoch=1424,epochs=100,callbacks=callbacks_list,
                                     validation_data=val_set,validation_steps= 117,verbose=1)
