@@ -7,9 +7,9 @@ from tqdm import tqdm
 
 ## TRAINING DATA
 
-pm = 'D:\Python Scripts/DR/train/mild'
+pm = 'D:/Python Scripts/DR/train/mild'
 b=1
-path='D:\Python Scripts/DR/Training/Mild/'
+path='D:/Python Scripts/DR/Training/Mild/'
 for img in tqdm(os.listdir(pm)):
     img = cv2.imread(os.path.join(pm,img))
     img  = cv2.resize(img,(500,500))
@@ -20,9 +20,9 @@ for img in tqdm(os.listdir(pm)):
     x = cv2.imwrite(p,cl1)
     b = b+1
 
-pm = 'D:\Python Scripts/DR/train/severe'
+pm = 'D:/Python Scripts/DR/train/severe'
 b=1
-path='D:\Python Scripts/DR/Training/Severe/'
+path='D:/Python Scripts/DR/Training/Severe/'
 for img in tqdm(os.listdir(pm)):
     img = cv2.imread(os.path.join(pm,img))
     img  = cv2.resize(img,(500,500))
@@ -33,9 +33,9 @@ for img in tqdm(os.listdir(pm)):
     x = cv2.imwrite(p,cl1)
     b = b+1
 
-pm = 'D:\Python Scripts/DR/train/moderate'
+pm = 'D:/Python Scripts/DR/train/moderate'
 b=1
-path='D:\Python Scripts/DR/Training/moderate/'
+path='D:/Python Scripts/DR/Training/moderate/'
 for img in tqdm(os.listdir(pm)):
     img = cv2.imread(os.path.join(pm,img))
     img  = cv2.resize(img,(500,500))
@@ -46,9 +46,9 @@ for img in tqdm(os.listdir(pm)):
     x = cv2.imwrite(p,cl1)
     b = b+1
 
-pm = 'D:\Python Scripts/DR/train/No'
+pm = 'D:/Python Scripts/DR/train/No'
 b=1
-path='D:\Python Scripts/DR/Training/No/'
+path='D:/Python Scripts/DR/Training/No/'
 for img in tqdm(os.listdir(pm)):
     img = cv2.imread(os.path.join(pm,img))
     img  = cv2.resize(img,(500,500))
@@ -59,9 +59,9 @@ for img in tqdm(os.listdir(pm)):
     x = cv2.imwrite(p,cl1)
     b = b+1
 
-pm = 'D:\Python Scripts/DR/train/pdr'
+pm = 'D:/Python Scripts/DR/train/pdr'
 b=1
-path='D:\Python Scripts/DR/Training/pdr/'
+path='D:/Python Scripts/DR/Training/pdr/'
 for img in tqdm(os.listdir(pm)):
     img = cv2.imread(os.path.join(pm,img))
     img  = cv2.resize(img,(500,500))
@@ -76,9 +76,9 @@ for img in tqdm(os.listdir(pm)):
 
 ## VALIDATION DATA
 
-pm = 'D:\Python Scripts/DR/Val/mild'
+pm = 'D:/Python Scripts/DR/Val/mild'
 b=1
-path='D:\Python Scripts/DR/Validation/Mild/'
+path='D:/Python Scripts/DR/Validation/Mild/'
 for img in tqdm(os.listdir(pm)):
     img = cv2.imread(os.path.join(pm,img))
     img  = cv2.resize(img,(500,500))
@@ -89,9 +89,9 @@ for img in tqdm(os.listdir(pm)):
     x = cv2.imwrite(p,cl1)
     b = b+1
 
-pm = 'D:\Python Scripts/DR/Val/severe'
+pm = 'D:/Python Scripts/DR/Val/severe'
 b=1
-path='D:\Python Scripts/DR/Validation/Severe/'
+path='D:/Python Scripts/DR/Validation/Severe/'
 for img in tqdm(os.listdir(pm)):
     img = cv2.imread(os.path.join(pm,img))
     img  = cv2.resize(img,(500,500))
@@ -102,9 +102,9 @@ for img in tqdm(os.listdir(pm)):
     x = cv2.imwrite(p,cl1)
     b = b+1
 
-pm = 'D:\Python Scripts/DR/Val/moderate'
+pm = 'D:/Python Scripts/DR/Val/moderate'
 b=1
-path='D:\Python Scripts/DR/Validation/moderate/'
+path='D:/Python Scripts/DR/Validation/moderate/'
 for img in tqdm(os.listdir(pm)):
     img = cv2.imread(os.path.join(pm,img))
     img  = cv2.resize(img,(500,500))
@@ -115,9 +115,9 @@ for img in tqdm(os.listdir(pm)):
     x = cv2.imwrite(p,cl1)
     b = b+1
 
-pm = 'D:\Python Scripts/DR/Val/No'
+pm = 'D:/Python Scripts/DR/Val/No'
 b=1
-path='D:\Python Scripts/DR/Validation/No/'
+path='D:/Python Scripts/DR/Validation/No/'
 for img in tqdm(os.listdir(pm)):
     img = cv2.imread(os.path.join(pm,img))
     img  = cv2.resize(img,(500,500))
@@ -128,9 +128,9 @@ for img in tqdm(os.listdir(pm)):
     x = cv2.imwrite(p,cl1)
     b = b+1
 
-pm = 'D:\Python Scripts/DR/Val/pdr'
+pm = 'D:/Python Scripts/DR/Val/pdr'
 b=1
-path='D:\Python Scripts/DR/Validation/pdr/'
+path='D:/Python Scripts/DR/Validation/pdr/'
 for img in tqdm(os.listdir(pm)):
     img = cv2.imread(os.path.join(pm,img))
     img  = cv2.resize(img,(500,500))
