@@ -4,7 +4,7 @@ DR is a complication of diabetes and a leading cause of blindness in the United 
 
 Diabetic retinopathy damages the blood vessels within the retinal tissue, causing them to leak fluid and distort vision.
 
-[!alt text](http://www.retinegallien.com/up/pathologies/diabetique/diabet-01Z.jpg)
+![alt text](https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/183/183417/diabetic-retinopathy-header.jpg?w=1155&h=1747)
 
 There are two types of DR:
 
