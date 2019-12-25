@@ -12,3 +12,13 @@ There are two types of DR:
 This is the milder form of diabetic retinopathy and is usually symptomless.
 ### Proliferative diabetic retinopathy(PDR): 
 PDR is the most advanced stage of diabetic retinopathy and refers to the formation of new, abnormal blood vessels in the retina
+
+The Non-proliferative diabetic retinopathy (NPDR) has three different classes, namely:- 
+
+1. Mild
+
+2. Moderate
+
+3. Severe
+
+
